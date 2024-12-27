@@ -9,8 +9,8 @@
 ``sudo smartctl -t long /dev/sda`` - for detailed check
 ### mark bad sectors as unusable
 ``sudo badblocks -v /dev/sda > badblocks.log`` - checks for bad blocks with verbose (tells the result) saving the results in a file named badblocks.log  
-OR ``sudo badblocks -n /dev/sda`` - checks without destructing existing data  
-OR ``sudo badblocks -w /dev/sda`` - destructs existing data while checking (only for unmounted or unused disk)  
+**OR** ``sudo badblocks -n /dev/sda`` - checks without destructing existing data  
+**OR** ``sudo badblocks -w /dev/sda`` - destructs existing data while checking (only for unmounted or unused disk)  
 
 
 ``sudo e2fsck -l badblocks.log /dev/sda1`` - inform filesystems about the bad blocks  
