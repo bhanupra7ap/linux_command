@@ -3,13 +3,13 @@
 ``sudo systemctl disable <service_name>`` - to stop a service  
 
 # Firewall
-###Enable/Disable/Reset UFW
+### Enable/Disable/Reset UFW
 ``sudo ufw enable/disable/reset``
-###Check current rules
+### Check current rules
 ``sudo ufw status``
-###Allow/Deny a specific port
+### Allow/Deny a specific port
 ``sudo ufw allow/deny <port>``
-###Allow a specific service
+### Allow a specific service
 ``sudo ufw allow <service_name>``
 
 # GitHub
