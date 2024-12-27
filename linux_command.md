@@ -2,6 +2,19 @@
 ``systemctl list-unit-files --type=service --state=enabled`` - to check which services start when boot  
 ``sudo systemctl disable <service_name>`` - to stop a service  
 
+# Disk health check
+### system status check ( or long test results)
+``sudo smartctl -l selftest /dev/sda``
+### long test
+``sudo smartctl -t long /dev/sda`` - for detailed check
+### mark bad sectors as unusable
+``sudo badblocks -v /dev/sda > badblocks.log`` - checks for bad blocks with verbose (tells the result) saving the results in a file named badblocks.log  
+``sudo badblocks -n /dev/sda`` - checks without destructing existing data  
+``sudo badblocks -w /dev/sda`` - destructs existing data while checking (only for unmounted or unused disk)  
+
+
+``sudo e2fsck -l badblocks.log /dev/sda1`` - inform filesystems about the bad blocks  
+
 # Firewall
 ### Enable/Disable/Reset UFW
 ``sudo ufw enable/disable/reset``
