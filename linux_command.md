@@ -2,6 +2,16 @@
 ``systemctl list-unit-files --type=service --state=enabled`` - to check which services start when boot  
 ``sudo systemctl disable <service_name>`` - to stop a service  
 
+# Firewall
+###Enable/Disable/Reset UFW
+``sudo ufw enable/disable/reset``
+###Check current rules
+``sudo ufw status``
+###Allow/Deny a specific port
+``sudo ufw allow/deny <port>``
+###Allow a specific service
+``sudo ufw allow <service_name>``
+
 # GitHub
 ``ssh-keygen -t rsa -b 4096 -C "email@example.com"`` - create new ssh key  
 ``cat ~/.ssh/id_rsa.pub`` - read the public key  
