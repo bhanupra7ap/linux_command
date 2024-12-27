@@ -7,7 +7,7 @@
 **cat ~/.ssh/id_rsa.pub** - read the public key  
 
 ## for large files:
-**git lfs track \* **  
+**git lfs track \***  
 **git add .gitattributes**  
 **git add .**  
 **git commit -m "message"**  
