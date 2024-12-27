@@ -20,8 +20,8 @@
 **lscpu** - cpu specifications  
 
 # OS scheduling
-(''cat /sys/block/sda/queue/scheduler'') - to know which scheduling is used by the pc (ususlly mq-deadline or bfq)  
-(''echo mq-deadline | sudo tee /sys/block/sda/queue/scheduler'') - to change the scheduling  
+(``cat /sys/block/sda/queue/scheduler``) - to know which scheduling is used by the pc (ususlly mq-deadline or bfq)  
+``echo mq-deadline | sudo tee /sys/block/sda/queue/scheduler`` - to change the scheduling  
 
 
 
