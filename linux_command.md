@@ -2,6 +2,19 @@
 ``systemctl list-unit-files --type=service --state=enabled`` - to check which services start when boot  
 ``sudo systemctl disable <service_name>`` - to stop a service  
 
+# Background Process
+``screen -S session_namee`` - creates seperate screen in background
+**Press Ctrl + A, then D to detach from the screen and run in background**
+``screen -r session_name`` - to reconnect with the screen
+``screen -ls`` - list all the screen running
+``screen -X -S session_name quit`` - to terminate screen
+**OR reconnect with the screen and type "exit"** 
+
+# Disk Formatting
+``sudo shred -v -n 3 -z /dev/sdX`` - overwrites the disk sdX 3 times(-n) to make the data unrecoverable
+``sudo dd if=/dev/zero of=/dev/sdX bs=1M status=progress`` - fills the disk sdX with zeros
+``sudo dd if=/dev/urandom of=/dev/sdX bs=1M status=progress`` - fills the disk sdX with random data
+
 # Disk health check
 ### system status check ( or long test results)
 ``sudo smartctl -l selftest /dev/sda``
